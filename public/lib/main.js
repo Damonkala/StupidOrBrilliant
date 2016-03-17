@@ -6,14 +6,13 @@
 // ReactDOM.render(<AppController />, document.getElementById("react"));
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import List from './components/AppController'
 import UserPage from './components/UserPage'
 
 render((
-  <Router history={browserHistory}>
-    <Route path="/" component={List}/>
-    {/* add the routes here */}
+  <Router history={hashHistory}>
+    <Route path="/list" component={List}/>
     <Route path="/user" component={UserPage}/>
   </Router>
 ), document.getElementById('react'))
